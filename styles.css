@@ -1,0 +1,40 @@
+/* Custom font for a cleaner look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --bg-dark: #0F172A; /* Deep Navy/Slate */
+    --card-dark: #1E293B; /* Slightly lighter card background */
+    --text-light: #E2E8F0; /* Off-white text */
+    --accent-indigo: #6366F1; /* Indigo 500 for buttons/highlights */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+.card {
+    background-color: var(--card-dark);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem; /* Equivalent to rounded-xl in Tailwind */
+}
+
+/* Custom styling for the profile image border effect */
+.profile-frame {
+    position: relative;
+    padding: 1rem; /* Adjust padding to control border width */
+    background: linear-gradient(135deg, var(--accent-indigo) 0%, #06B6D4 100%); /* Border color gradient */
+    border-radius: 1.5rem; /* Match the rounded-xl on the container */
+}
+
+.profile-frame img {
+    border-radius: 1rem; /* Slightly smaller radius inside the frame */
+    /* Add object-fit cover class for responsiveness */
+}
+
+/* Modal specific styling */
+.modal {
+    background-color: rgba(15, 23, 42, 0.95); /* Semi-transparent dark overlay */
+}
